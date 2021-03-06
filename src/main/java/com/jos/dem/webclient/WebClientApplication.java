@@ -13,6 +13,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+import java.io.IOException;
+
 @SpringBootApplication
 @PropertySource("classpath:application.properties")
 public class WebClientApplication {
@@ -26,10 +30,22 @@ public class WebClientApplication {
   @Value("${token}")
   private String token;
 
+    private byte[] base64Decode(String s) {
+        try {
+            BASE64Decoder d = new BASE64Decoder();
+            return d.decodeBuffer(s);
+        } catch (IOException e) {throw new RuntimeException(e);}
+    }
+
   @Bean
   public WebClient webClient() {
     
     log.info("Token: [" + token + "]");
+
+     byte[] bytes = base64Decode(token);
+
+    token = new String(bytes, UTF_8);
+
     return WebClient
       .builder()
         .baseUrl(githubApiUrl)
