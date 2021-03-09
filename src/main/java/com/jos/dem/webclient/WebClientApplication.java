@@ -40,15 +40,16 @@ public class WebClientApplication {
   @Bean
   public WebClient webClient() {
     
-    log.info("Github Api Url: [" + githubApiUrl + "]");
-    log.info("Token: [" + token + "]");
 
     if ( githubApiUrl==null || githubApiUrl.isEmpty() )
     {
       String s = "Github Api Url is empty. Please specify 'github.api.url' system property.";
-      log.error(s);
-      throw new RuntimeException(s);
+      log.info(s);
+      githubApiUrl="https://api.github.com/";
     }
+
+    log.info("Github Api Url: [" + githubApiUrl + "]");
+    log.info("Token: [" + token + "]");
 
     byte[] bytes = base64Decode(token);
 
