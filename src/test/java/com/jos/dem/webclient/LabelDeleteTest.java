@@ -12,7 +12,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.slf4j.LoggerFactory; 
 
 public class LabelDeleteTest extends LabelIntegrationTest {
 
