@@ -1,0 +1,84 @@
+{
+	"objects": [
+		{
+			"application": "Local|cucumber-junit5-rest-api",
+			"name": "master",
+			"kind": "ApplicationVersion"
+		},
+		{
+			"applicationVersions": [
+				"Local|cucumber-junit5-rest-api/master"
+			],
+			"isReplaceApplicationVersionOnChangeNotification": false,
+			"markAsDonePhaseName": "",
+			"runOnCreation": false,
+			"version": "master",
+			"name": "cucumber-junit5-rest-api",
+			"kind": "Release",
+			"ownerParties": [
+				"ofer.yaniv@broadcom.okta.com"
+			]
+		},
+		{
+			"release": "cucumber-junit5-rest-api/master",
+			"environments": [
+				"DEV"
+			],
+			"approvalGate": "AUTOMATIC",
+			"skipTasksWithUnchangedApplications": false,
+			"isApprovalRequired": false,
+			"name": "DEV",
+			"kind": "Phase"
+		},
+		{
+			"phase": "cucumber-junit5-rest-api/master/DEV",
+			"isDisabled": false,
+			"applicationVersionBuilds": [
+				{
+					"applicationVersion": "Local|cucumber-junit5-rest-api/master",
+					"buildNumber": "%cucumber-junit5-rest-api.last_successful_change%"
+				}
+			],
+			"isOnFailurePhaseEnabled": true,
+			"isSkipTaskOnFailure": false,
+			"isIgnoreTaskFailure": false,
+			"name": "cucumber-junit5-rest-api",
+			"kind": "Task",
+			"plugin": "ADAPTIVE TESTING/1.1.1|4",
+			"parameters": {
+				"changeId": "%cucumber-junit5-rest-api.last_successful_change%",
+				"runOnlySubset": "false"
+			},
+			"type": "Run Adaptive Testing",
+			"tags": [
+				"cucumber-junit5-rest-api"
+			]
+		},
+		{
+			"phase": "cucumber-junit5-rest-api/master/DEV",
+			"isDisabled": false,
+			"applicationVersionBuilds": [
+				{
+					"applicationVersion": "Local|cucumber-junit5-rest-api/master",
+					"buildNumber": "%cucumber-junit5-rest-api.last_successful_change%"
+				}
+			],
+			"isOnFailurePhaseEnabled": true,
+			"isSkipTaskOnFailure": false,
+			"isIgnoreTaskFailure": false,
+			"previousTasks": [
+				"cucumber-junit5-rest-api"
+			],
+			"name": "Blazemeter Selenium",
+			"kind": "Task",
+			"plugin": "ADAPTIVE TESTING/1.1.1|4",
+			"parameters": {
+				"runOnlySubset": "false"
+			},
+			"type": "Run Adaptive Testing",
+			"tags": [
+				"Vodafone_DEMO"
+			]
+		}
+	]
+}
