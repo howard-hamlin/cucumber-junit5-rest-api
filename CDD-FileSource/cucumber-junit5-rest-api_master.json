@@ -69,7 +69,7 @@
 		},
 		{
 			"phase": "cucumber-junit5-rest-api/master/DEV",
-			"isDisabled": false,
+			"isDisabled": true,
 			"applicationVersionBuilds": [
 				{
 					"applicationVersion": "Local|cucumber-junit5-rest-api/master",
@@ -240,9 +240,9 @@
 					"buildNumber": "%cucumber-junit5-rest-api.last_successful_change%"
 				}
 			],
-			"isOnFailurePhaseEnabled": true,
+			"isOnFailurePhaseEnabled": false,
 			"isSkipTaskOnFailure": false,
-			"isIgnoreTaskFailure": false,
+			"isIgnoreTaskFailure": true,
 			"name": "Blazemeter Selenium",
 			"kind": "Task",
 			"plugin": "ADAPTIVE TESTING/1.1.1|4",
@@ -311,9 +311,9 @@
 					"buildNumber": "%cucumber-junit5-rest-api.last_successful_change%"
 				}
 			],
-			"isOnFailurePhaseEnabled": true,
+			"isOnFailurePhaseEnabled": false,
 			"isSkipTaskOnFailure": false,
-			"isIgnoreTaskFailure": false,
+			"isIgnoreTaskFailure": true,
 			"name": "Blazemeter Selenium",
 			"kind": "Task",
 			"plugin": "ADAPTIVE TESTING/1.1.1|4",
