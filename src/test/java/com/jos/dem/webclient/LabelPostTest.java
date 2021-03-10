@@ -3,7 +3,7 @@ package com.jos.dem.webclient;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.jos.dem.webclient.model.LabelResponse;
+import com.jos.dem.webclient.model.LabelResponse; 
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
