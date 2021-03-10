@@ -69,27 +69,6 @@
 		},
 		{
 			"phase": "cucumber-junit5-rest-api/master/DEV",
-			"isDisabled": true,
-			"applicationVersionBuilds": [
-				{
-					"applicationVersion": "Local|cucumber-junit5-rest-api/master",
-					"buildNumber": "%cucumber-junit5-rest-api.last_successful_change%"
-				}
-			],
-			"isOnFailurePhaseEnabled": true,
-			"isSkipTaskOnFailure": false,
-			"isIgnoreTaskFailure": false,
-			"name": ".",
-			"kind": "Task",
-			"plugin": "Manual Deployment/1.1|2",
-			"endpoint": "manual deployment",
-			"type": "Manual Deployment"
-		},
-		{
-			"phase": "cucumber-junit5-rest-api/master/DEV",
-			"previousTasks": [
-				"."
-			],
 			"isDisabled": false,
 			"applicationVersionBuilds": [
 				{
@@ -114,27 +93,6 @@
 		},
 		{
 			"phase": "cucumber-junit5-rest-api/master/TEST",
-			"isDisabled": false,
-			"applicationVersionBuilds": [
-				{
-					"applicationVersion": "Local|cucumber-junit5-rest-api/master",
-					"buildNumber": "%cucumber-junit5-rest-api.last_successful_change%"
-				}
-			],
-			"isOnFailurePhaseEnabled": true,
-			"isSkipTaskOnFailure": false,
-			"isIgnoreTaskFailure": false,
-			"name": ".",
-			"kind": "Task",
-			"plugin": "Manual Deployment/1.1|2",
-			"endpoint": "manual deployment",
-			"type": "Manual Deployment"
-		},
-		{
-			"phase": "cucumber-junit5-rest-api/master/TEST",
-			"previousTasks": [
-				"."
-			],
 			"isDisabled": false,
 			"applicationVersionBuilds": [
 				{
@@ -195,27 +153,6 @@
 			"isOnFailurePhaseEnabled": true,
 			"isSkipTaskOnFailure": false,
 			"isIgnoreTaskFailure": false,
-			"name": ".",
-			"kind": "Task",
-			"plugin": "Manual Deployment/1.1|2",
-			"endpoint": "manual deployment",
-			"type": "Manual Deployment"
-		},
-		{
-			"phase": "cucumber-junit5-rest-api/master/STAGE",
-			"previousTasks": [
-				"."
-			],
-			"isDisabled": false,
-			"applicationVersionBuilds": [
-				{
-					"applicationVersion": "Local|cucumber-junit5-rest-api/master",
-					"buildNumber": "%cucumber-junit5-rest-api.last_successful_change%"
-				}
-			],
-			"isOnFailurePhaseEnabled": true,
-			"isSkipTaskOnFailure": false,
-			"isIgnoreTaskFailure": false,
 			"name": "Cucumber Junit5 REST API",
 			"kind": "Task",
 			"plugin": "ADAPTIVE TESTING/1.1.1|4",
@@ -256,27 +193,6 @@
 		},
 		{
 			"phase": "cucumber-junit5-rest-api/master/PROD",
-			"isDisabled": false,
-			"applicationVersionBuilds": [
-				{
-					"applicationVersion": "Local|cucumber-junit5-rest-api/master",
-					"buildNumber": "%cucumber-junit5-rest-api.last_successful_change%"
-				}
-			],
-			"isOnFailurePhaseEnabled": true,
-			"isSkipTaskOnFailure": false,
-			"isIgnoreTaskFailure": false,
-			"name": ".",
-			"kind": "Task",
-			"plugin": "Manual Deployment/1.1|2",
-			"endpoint": "manual deployment",
-			"type": "Manual Deployment"
-		},
-		{
-			"phase": "cucumber-junit5-rest-api/master/PROD",
-			"previousTasks": [
-				"."
-			],
 			"isDisabled": false,
 			"applicationVersionBuilds": [
 				{
