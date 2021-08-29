@@ -47,7 +47,14 @@ public class UserGetTest extends UserIntegrationTest {
       .block();
     log.info("Emails Size: [" + emails.size() + "]");
     log.info("Emails : [" + emails + "]");
-    PublicEmail email = emails.get(0);
+    
+    PublicEmail email = null;
+    final String emailAddress = "howard.hamlin.howard@gmail.com";
+    for(int i=0; i<emails.size(); i++) {
+        email = emails.get(i);
+        if ( email == emailAddress )
+          break;
+    }
 
     log.info("Public Email: [" + email.getEmail() + "]");
     log.info("Email Verified: [" + email.getVerified() + "]");
@@ -56,7 +63,7 @@ public class UserGetTest extends UserIntegrationTest {
 
     assertTrue(emails.size() == 4,  () -> "Should be 4 emails");
     assertAll("email",
-        () -> assertEquals("howard.hamlin.howard@gmail.com", email.getEmail(), "Should contains josdem's email"),
+        () -> assertEquals(emailAddress, email.getEmail(), "Should contains howard's email"),
         () -> assertTrue(email.getVerified(), "Should be verified"),
         () -> assertTrue(email.getPrimary(), "Should be primary"),
         () -> assertEquals("public", email.getVisibility(), "Should be public")
