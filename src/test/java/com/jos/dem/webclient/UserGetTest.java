@@ -52,7 +52,7 @@ public class UserGetTest extends UserIntegrationTest {
     final String emailAddress = "howard.hamlin.howard@gmail.com";
     for(int i=0; i<emails.size(); i++) {
         email = emails.get(i);
-        if ( email == emailAddress )
+        if ( email.getEmail() == emailAddress )
           break;
     }
 
