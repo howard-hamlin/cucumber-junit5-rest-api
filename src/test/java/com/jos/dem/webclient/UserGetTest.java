@@ -48,8 +48,8 @@ public class UserGetTest extends UserIntegrationTest {
     log.info("Emails Size: [" + emails.size() + "]");
     log.info("Emails : [" + emails + "]");
     
-    final PublicEmail email = null;
-    final String emailAddress = "howard.hamlin.howard@gmail.com";
+    PublicEmail email = null;
+    String emailAddress = "howard.hamlin.howard@gmail.com";
     for(int i=0; i<emails.size(); i++) {
         email = emails.get(i);
         if ( email.getEmail() == emailAddress )
